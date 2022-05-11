@@ -39,7 +39,7 @@ namespace unit02_hilo.Game
         }
 
         /// <summary>
-        /// Gets the last Card Value, 
+        /// Gets the last Card value and saves it, then gets higher or lower from the player, then draws a new card. 
         /// </summary>
         public void GetInputs()
         {
@@ -51,7 +51,7 @@ namespace unit02_hilo.Game
         }
 
         /// <summary>
-        /// Updates the player's score.
+        /// Determines whether the card value is higher or lower, then awards points as such. 
         /// </summary>
         public void DoUpdates()
         {
@@ -80,7 +80,7 @@ namespace unit02_hilo.Game
         }
 
         /// <summary>
-        /// Displays the dice and the score. Also asks the player if they want to roll again. 
+        /// Displays the new card and the score, then asks the player if they want to play again.  
         /// </summary>
         public void DoOutputs()
         {
