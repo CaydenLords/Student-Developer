@@ -44,8 +44,8 @@ namespace unit02_hilo.Game
         public void GetInputs()
         {
             lastCard = card.value;
-            Console.WriteLine($"The Card is {lastCard}");
-            Console.Write("Higher or Lower? h/l");
+            Console.WriteLine($"The card is :{lastCard}.");
+            Console.Write("Higher or Lower? [h/l] ");
             guess = Console.ReadLine();
             card.Draw();
         }
@@ -90,8 +90,9 @@ namespace unit02_hilo.Game
             }
             Console.WriteLine($"The next card was {card.value}.");
             Console.WriteLine($"Your score is {totalScore}.");
-            Console.WriteLine("Do you want to play again? y/n ");
+            Console.Write("Do you want to play again? [y/n] ");
             string playAgain = Console.ReadLine();
+            Console.WriteLine("");
             isPlaying = (playAgain == "y");
         }
     }
