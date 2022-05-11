@@ -12,7 +12,7 @@ namespace unit02_hilo.Game
     public class Director
     {
         Card card = new Card();
-        int totalScore = 0;
+        int totalScore = 300;
         int lastCard = 0;
         string guess = "h";
         bool isPlaying = true;
@@ -44,7 +44,7 @@ namespace unit02_hilo.Game
         public void GetInputs()
         {
             lastCard = card.value;
-            Console.WriteLine($"The card is :{lastCard}.");
+            Console.WriteLine($"The card is : {lastCard}.");
             Console.Write("Higher or Lower? [h/l] ");
             guess = Console.ReadLine();
             card.Draw();
@@ -90,10 +90,16 @@ namespace unit02_hilo.Game
             }
             Console.WriteLine($"The next card was {card.value}.");
             Console.WriteLine($"Your score is {totalScore}.");
-            Console.Write("Do you want to play again? [y/n] ");
-            string playAgain = Console.ReadLine();
+            if (totalScore > 0){
+                Console.Write("Do you want to play again? [y/n] ");
+                string playAgain = Console.ReadLine();
+                isPlaying = (playAgain == "y");
+            }
+            else{
+                Console.WriteLine("Game Over");
+                isPlaying = false;
+            }
             Console.WriteLine("");
-            isPlaying = (playAgain == "y");
         }
     }
 }
