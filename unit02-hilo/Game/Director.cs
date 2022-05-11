@@ -39,11 +39,13 @@ namespace unit02_hilo.Game
         }
 
         /// <summary>
-        /// Asks the user if they want to roll.
+        /// Gets the last Card Value, 
         /// </summary>
         public void GetInputs()
         {
-            Console.Write($"The Card is {lastCard}");
+            lastCard = card.value;
+            Console.WriteLine($"The Card is {lastCard}");
+            Console.Write("Higher or Lower? h/l");
             guess = Console.ReadLine();
             card.Draw();
         }
